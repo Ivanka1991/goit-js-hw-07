@@ -11,17 +11,15 @@ const ingredients = [
     'Зелень',
     'Приправы',
   ];
-  //console.log(ingredients);
+  
    
-  const ingredientsList = document.createElement('ul');
-  console.log(ingredientsList)
-  const body = document.querySelector('body');
-  body.append(ingredientsList)
-  ingredients.forEach(ingredient => {
-      const ingredientsItem = document.createElement('li');
-      ingredientsItem.textContent = ingredient;
-      console.log(ingredientsItem)
-      ingredientsList.append(ingredientsItem)
+
+  const ingredientsList = document.getElementById('ingredients');
+  const ingredientsItem = ingredients.map(ingredient => {
+      const ingredientsEl = document.createElement('li');
+      ingredientsEl.textContent = ingredient;
+      return ingredientsEl
   });
-  //const ingredientsItem = document.createElement('li')
-  //.textContent = ingredient;
+  ingredientsList.append(...ingredientsItem);
+  
+  

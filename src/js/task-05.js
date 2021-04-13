@@ -7,5 +7,10 @@
 
  inputEl.addEventListener('input', (e) =>{
      e.preventDefault;
-     outputEl.textContent = inputEl.value;
+     if(inputEl.value === ''){
+         outputEl.innerHTML = 'незнакомец';
+     }else{
+     outputEl.textContent = inputEl.value;}
  })
+
+
